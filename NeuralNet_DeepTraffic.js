@@ -2,10 +2,10 @@
 //<![CDATA[
 
 // a few things don't have var in front of them - they update already existing variables the game needs
-lanesSide = 0;
-patchesAhead = 5;
-patchesBehind = 0;
-trainIterations = 10000;
+lanesSide = 1;
+patchesAhead = 3;
+patchesBehind = 6;
+trainIterations = 100000;
 
 var num_inputs = (lanesSide * 2 + 1) * (patchesAhead + patchesBehind);
 var num_actions = 5;
@@ -21,7 +21,7 @@ layer_defs.push({
 });
 layer_defs.push({
     type: 'fc',
-    num_neurons: 1,
+    num_neurons: 100,
     activation: 'relu'
 });
 layer_defs.push({
